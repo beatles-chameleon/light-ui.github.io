@@ -457,9 +457,11 @@
 <pre><code class="lang-vue">&lt;template&gt;
 &lt;page title=&quot;light-fullscreen&quot;&gt;
   &lt;view class=&quot;container&quot;&gt;
-    &lt;c-header title=&quot;light-fullscreen&quot;&gt;&lt;/c-header&gt;
-    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center&quot;&gt;
+    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center;height:100cpx;&quot;&gt;
       &lt;text c-bind:tap=&quot;handleTap&quot;&gt;&#x6253;&#x5F00;&#x5168;&#x5C4F;&#x5F39;&#x7A97;&lt;/text&gt;
+    &lt;/view&gt;
+    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center;height:100cpx;&quot;&gt;
+      &lt;text c-bind:tap=&quot;handleTap1&quot;&gt;&#x6253;&#x5F00;&#x5168;&#x5C4F;&#x5F39;&#x7A97;-&#x4E00;&#x4E2A;&#x6309;&#x94AE;&lt;/text&gt;
     &lt;/view&gt;
 
     &lt;light-fullscreen 
@@ -469,7 +471,15 @@
       c-bind:cancel=&quot;handleCancel&quot;
       confirm-text=&quot;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&quot;
       cancel-text=&quot;&#x6B21;&#x8981;&#x64CD;&#x4F5C;&quot;
-      cancel-style=&quot;color:green&quot;
+      &gt;
+      &lt;view style=&quot;height:600cpx;&quot; class=&quot;content&quot;&gt;&lt;text&gt;this is content&lt;/text&gt;&lt;/view&gt;
+    &lt;/light-fullscreen&gt;
+     &lt;light-fullscreen 
+      show=&quot;{{halfShow1}}&quot; 
+      c-bind:close=&quot;closeFullScreen1&quot;
+      c-bind:confirm=&quot;handleConfirm&quot;
+      c-bind:cancel=&quot;handleCancel&quot;
+      confirm-text=&quot;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&quot;
       &gt;
       &lt;view style=&quot;height:600cpx;&quot; class=&quot;content&quot;&gt;&lt;text&gt;this is content&lt;/text&gt;&lt;/view&gt;
     &lt;/light-fullscreen&gt;
@@ -482,7 +492,7 @@ class LightFullscreen {
 
   data = {
     halfShow:false,
-    imgSrc:require(&apos;../../../assets/images/chameleon.jpg&apos;)
+    halfShow1:false,
   }
 
   computed = {
@@ -498,6 +508,12 @@ class LightFullscreen {
     handleTap(){
       this.halfShow = true;
     },
+    closeFullScreen1(){
+      this.halfShow1 = false;
+    },
+    handleTap1(){
+      this.halfShow1= true;
+    },
     handleConfirm(){
       console.log(&apos;handleConfirm&apos;);
     },
@@ -511,7 +527,7 @@ class LightFullscreen {
 export default new LightFullscreen();
 &lt;/script&gt;
 &lt;style scoped lang=&quot;less&quot;&gt;
-@import &apos;../../../assets/css/var.less&apos;;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -532,12 +548,29 @@ export default new LightFullscreen();
 {
     &quot;base&quot;: {
         &quot;usingComponents&quot;: {
-          &quot;light-fullscreen&quot;: &quot;/components/light-fullscreen/light-fullscreen&quot;
-        },
-        &quot;navigationBarTitleText&quot;: &quot;c-toast&quot;,
-        &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-        &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-    }
+          &quot;light-fullscreen&quot;: &quot;@cmlkit/light-ui/components/light-fullscreen/light-fullscreen&quot;
+        }
+    },
+    &quot;wx&quot;: {
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
+  },
+  &quot;alipay&quot;: {
+    &quot;defaultTitle&quot;: &quot;index&quot;,
+    &quot;pullRefresh&quot;: false,
+    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
+    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
+  },
+  &quot;baidu&quot;: {
+    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;enablePullDownRefresh&quot;: false,
+    &quot;onReachBottomDistance&quot;: 50
+  }
 }
 &lt;/script&gt;
 </code></pre>
@@ -607,7 +640,7 @@ export default new LightFullscreen();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-fullscreen","level":"3.1","depth":1,"next":{"title":"light-halfscreen","level":"3.2","depth":1,"path":"components/light-halfscreen.md","ref":"components/light-halfscreen.md","articles":[]},"previous":{"title":"light-checklabelcard","level":"2.8","depth":1,"path":"components/light-checklabelcard.md","ref":"components/light-checklabelcard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-fullscreen.md","mtime":"2020-02-26T09:39:15.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-fullscreen","level":"3.1","depth":1,"next":{"title":"light-halfscreen","level":"3.2","depth":1,"path":"components/light-halfscreen.md","ref":"components/light-halfscreen.md","articles":[]},"previous":{"title":"light-checklabelcard","level":"2.8","depth":1,"path":"components/light-checklabelcard.md","ref":"components/light-checklabelcard.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-fullscreen.md","mtime":"2020-03-13T08:01:25.072Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

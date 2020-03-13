@@ -502,18 +502,27 @@ class LightCheckbox {
     isChecked1:true,
     isChecked2:false
   }
+
+  computed = {
+  }
+
+  watch  = {
+  }
+
   methods = {
     handleChange1(e){
-      //c-model&#x4F20;&#x9012;&#x7684;&#x503C;&#x9ED8;&#x8BA4;&#x4F1A;&#x6539;&#x53D8;
       console.log(&apos;e&apos;,e);
       console.log(&apos;this.isChecked1&apos;,this.isChecked1)
     },
     handleChange2(e){
       console.log(&apos;e&apos;,e);
-      //c-model&#x672C;&#x8EAB;&#x5C31;&#x662F;value&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x503C;&#x4F20;&#x9012;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;value&#x503C;&#xFF0C;&#x7136;&#x540E;&#x6539;&#x53D8;&#x5B83;
       console.log(&apos;this.isChecked2&apos;,this.isChecked2);
       this.isChecked2 = !this.isChecked2;
     },
+    handleTap(){
+      //&#x6D4B;&#x8BD5;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;tap&#x4E8B;&#x4EF6;&#x963B;&#x6B62;&#x5192;&#x6CE1;
+      console.log(&apos;tap-ck&apos;)
+    }
   }
 
 }
@@ -521,7 +530,6 @@ class LightCheckbox {
 export default new LightCheckbox();
 &lt;/script&gt;
 &lt;style scoped lang=&quot;less&quot;&gt;
-@import &apos;../../../assets/css/var.less&apos;;
 .container {
   display: flex;
   flex-direction: column;
@@ -545,16 +553,37 @@ export default new LightCheckbox();
 .btn {
   margin-top: 20cpx;
 }
+
 &lt;/style&gt;
 &lt;script cml-type=&quot;json&quot;&gt;
 {
     &quot;base&quot;: {
         &quot;usingComponents&quot;: {
-        },
-        &quot;navigationBarTitleText&quot;: &quot;c-toast&quot;,
-        &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-        &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-    }
+          &quot;light-checkbox&quot;: &quot;@cmlkit/light-ui/components/light-checkbox/light-checkbox&quot;
+        }
+    },
+    &quot;wx&quot;: {
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
+  },
+  &quot;alipay&quot;: {
+    &quot;defaultTitle&quot;: &quot;index&quot;,
+    &quot;pullRefresh&quot;: false,
+    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
+    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
+  },
+  &quot;baidu&quot;: {
+    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;enablePullDownRefresh&quot;: false,
+    &quot;onReachBottomDistance&quot;: 50
+  }
+
+
 }
 &lt;/script&gt;
 </code></pre>
@@ -624,7 +653,7 @@ export default new LightCheckbox();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-checkbox","level":"2.5","depth":1,"next":{"title":"light-checkboxcard","level":"2.6","depth":1,"path":"components/light-checkboxcard.md","ref":"components/light-checkboxcard.md","articles":[]},"previous":{"title":"light-switch","level":"2.4","depth":1,"path":"components/light-switch.md","ref":"components/light-switch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-checkbox.md","mtime":"2020-02-26T09:39:15.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-checkbox","level":"2.5","depth":1,"next":{"title":"light-checkboxcard","level":"2.6","depth":1,"path":"components/light-checkboxcard.md","ref":"components/light-checkboxcard.md","articles":[]},"previous":{"title":"light-switch","level":"2.4","depth":1,"path":"components/light-switch.md","ref":"components/light-switch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-checkbox.md","mtime":"2020-03-13T07:59:51.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

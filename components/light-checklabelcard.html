@@ -491,37 +491,46 @@
 <h3 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
 <pre><code class="lang-vue">&lt;template&gt;
 &lt;page title=&quot;light-checklabelcard&quot;&gt;
-  &lt;view class=&quot;container&quot;&gt;
-    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center&quot;&gt;
-      &lt;text &gt;checklabelcard&lt;/text&gt;
+  &lt;scroller height=&quot;{{-1}}&quot;&gt;
+    &lt;view class=&quot;container&quot;&gt;
+      &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center&quot;&gt;
+        &lt;text &gt;checklabelcard&lt;/text&gt;
+      &lt;/view&gt;
     &lt;/view&gt;
-  &lt;/view&gt;
-  &lt;light-checklabelcard
-    card-title=&quot;&#x6211;&#x662F;&#x6807;&#x9898;&quot;
-    labels=&quot;{{labels}}&quot;
-    c-bind:onclick=&quot;handleChange1&quot;
-    &gt;
+    &lt;light-checklabelcard
+      card-title=&quot;&#x6211;&#x662F;&#x6807;&#x9898;&quot;
+      labels=&quot;{{labels}}&quot;
+      c-bind:onclick=&quot;handleChange&quot;
+      &gt;
     &lt;/light-checklabelcard&gt;
     &lt;light-checklabelcard
-    card-title=&quot;&#x6211;&#x662F;&#x6807;&#x9898;2&quot;
-    labels=&quot;{{labels2}}&quot;
-    c-bind:onclick=&quot;handleChange2&quot;
-    &gt;
+      card-title=&quot;&#x6211;&#x662F;&#x6807;&#x9898;1&quot;
+      labels=&quot;{{labels1}}&quot;
+      c-bind:onclick=&quot;handleChange1&quot;
+      labels-wrap-style=&quot;justify-content:space-around&quot;
+      &gt;
     &lt;/light-checklabelcard&gt;
     &lt;light-checklabelcard
-    card-title=&quot;&#x7701;&#x4EFD;&quot;
-    labels=&quot;{{labels3}}&quot;
-    c-bind:onclick=&quot;handleChange3&quot;
-    c-style=&quot;width:500cpx;&quot;
-    &gt;
+      card-title=&quot;&#x6211;&#x662F;&#x6807;&#x9898;2&quot;
+      labels=&quot;{{labels2}}&quot;
+      c-bind:onclick=&quot;handleChange2&quot;
+      &gt;
     &lt;/light-checklabelcard&gt;
     &lt;light-checklabelcard
-    card-title=&quot;&#x7701;&#x4EFD;-&#x53EA;&#x80FD;&#x9009;&#x4E2D;&#x4E00;&#x4E2A;&quot;
-    labels=&quot;{{labels4}}&quot;
-    c-bind:onclick=&quot;handleChange4&quot;
-    c-style=&quot;width:500cpx;&quot;
-    &gt;
+      card-title=&quot;&#x7701;&#x4EFD;&quot;
+      labels=&quot;{{labels3}}&quot;
+      c-bind:onclick=&quot;handleChange3&quot;
+      c-style=&quot;width:500cpx;&quot;
+      &gt;
     &lt;/light-checklabelcard&gt;
+    &lt;light-checklabelcard
+      card-title=&quot;&#x7701;&#x4EFD;-&#x53EA;&#x80FD;&#x9009;&#x4E2D;&#x4E00;&#x4E2A;&quot;
+      labels=&quot;{{labels4}}&quot;
+      c-bind:onclick=&quot;handleChange4&quot;
+      c-style=&quot;width:500cpx;&quot;
+      &gt;
+    &lt;/light-checklabelcard&gt;
+  &lt;/scroller&gt;
 
 &lt;/page&gt;
 &lt;/template&gt;
@@ -530,7 +539,6 @@ class LightChecklabelCard {
 
   data = {
     halfShow:false,
-    imgSrc:require(&apos;../../../assets/images/chameleon.jpg&apos;),
     isChecked1:true,
     isChecked2:false,
     labels:[{
@@ -540,6 +548,18 @@ class LightChecklabelCard {
 
     },{
       label:&apos;&#x6587;&#x6848;2&apos;,
+      isChecked:false,
+    }],
+    labels1:[{
+      label:&apos;&#x9009;&#x9879;&#x6587;&#x6848;1&apos;,
+      isChecked:false,
+      disable:true,
+
+    },{
+      label:&apos;&#x9009;&#x9879;&#x6587;&#x6848;2&apos;,
+      isChecked:false,
+    },{
+      label:&apos;&#x9009;&#x9879;&#x6587;&#x6848;3&apos;,
       isChecked:false,
     }],
     labels2:[
@@ -703,10 +723,15 @@ class LightChecklabelCard {
   }
 
   methods = {
-    handleChange1(e){
+    handleChange(e){
       console.log(&apos;e&apos;,e);
       console.log(&apos;this.labels[e.detail.index]&apos;,this.labels[e.detail.index]);
       this.labels[e.detail.index].isChecked = !this.labels[e.detail.index].isChecked 
+    },
+    handleChange1(e){
+      console.log(&apos;e&apos;,e);
+      console.log(&apos;this.labels[e.detail.index]&apos;,this.labels[e.detail.index]);
+      this.labels1[e.detail.index].isChecked = !this.labels1[e.detail.index].isChecked 
     },
     handleChange2(e){
       console.log(&apos;e&apos;,e);
@@ -729,7 +754,7 @@ class LightChecklabelCard {
 export default new LightChecklabelCard();
 &lt;/script&gt;
 &lt;style scoped lang=&quot;less&quot;&gt;
-@import &apos;../../../assets/css/var.less&apos;;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -759,12 +784,29 @@ export default new LightChecklabelCard();
 {
     &quot;base&quot;: {
         &quot;usingComponents&quot;: {
-          &quot;light-checklabelcard&quot;: &quot;/components/light-checklabelcard/light-checklabelcard&quot;
-        },
-        &quot;navigationBarTitleText&quot;: &quot;c-toast&quot;,
-        &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-        &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-    }
+          &quot;light-checklabelcard&quot;: &quot;@cmlkit/light-ui/components/light-checklabelcard/light-checklabelcard&quot;
+        }
+    },
+    &quot;wx&quot;: {
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
+  },
+  &quot;alipay&quot;: {
+    &quot;defaultTitle&quot;: &quot;index&quot;,
+    &quot;pullRefresh&quot;: false,
+    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
+    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
+  },
+  &quot;baidu&quot;: {
+    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;enablePullDownRefresh&quot;: false,
+    &quot;onReachBottomDistance&quot;: 50
+  }
 }
 &lt;/script&gt;
 </code></pre>
@@ -834,7 +876,7 @@ export default new LightChecklabelCard();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-checklabelcard","level":"2.8","depth":1,"next":{"title":"light-fullscreen","level":"3.1","depth":1,"path":"components/light-fullscreen.md","ref":"components/light-fullscreen.md","articles":[]},"previous":{"title":"light-checklabel","level":"2.7","depth":1,"path":"components/light-checklabel.md","ref":"components/light-checklabel.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-checklabelcard.md","mtime":"2020-02-26T09:39:15.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-checklabelcard","level":"2.8","depth":1,"next":{"title":"light-fullscreen","level":"3.1","depth":1,"path":"components/light-fullscreen.md","ref":"components/light-fullscreen.md","articles":[]},"previous":{"title":"light-checklabel","level":"2.7","depth":1,"path":"components/light-checklabel.md","ref":"components/light-checklabel.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-checklabelcard.md","mtime":"2020-03-13T08:01:12.241Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -489,7 +489,6 @@
 <h3 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
 <pre><code class="lang-vue">&lt;template&gt;
   &lt;page title=&quot;light-noticetips&quot;&gt;
-    &lt;c-header title=&quot;light-noticetips&quot;&gt;&lt;/c-header&gt;
     &lt;light-noticetips
       show=&quot;{{show}}&quot;
       icon=&quot;{{icon}}&quot;
@@ -501,10 +500,7 @@
     &gt;
     &lt;/light-noticetips&gt;
     &lt;view class=&quot;operator&quot;&gt;
-      &lt;light-button 
-        c-bind:onClick=&quot;open&quot; 
-        text=&quot;show noticetips&quot;
-      &gt;&lt;/light-button&gt;
+      &lt;button text=&quot;&#x70B9;&#x51FB;&#x6253;&#x5F00;noticetip&quot; c-bind:onclick=&quot;open&quot;&gt;&lt;/button&gt;
       &lt;text&gt;Tip: &#x5F53;noticetip&#x6253;&#x5F00;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4E0A;&#x6ED1;&#x5173;&#x95ED;&#x5B83;&#xFF0C;&#x4E5F;&#x53EF;&#x7B49;&#x5F85;&#x5B83;&#x81EA;&#x52A8;&#x5173;&#x95ED;(&#x9ED8;&#x8BA4;&#x7684;&#x5173;&#x95ED;&#x65F6;&#x95F4;&#x662F;5&#x79D2;) &lt;/text&gt;
     &lt;/view&gt;
    &lt;!-- &lt;cml-console/&gt; --&gt;
@@ -548,8 +544,6 @@ export default new LightNoticeTips();
 .operator {
   margin-top: 50cpx;
   padding: 20cpx;
-  align-items: center;
-
 }
 &lt;/style&gt;
 
@@ -557,9 +551,7 @@ export default new LightNoticeTips();
 {
   &quot;base&quot;: {
     &quot;usingComponents&quot;: {
-      &quot;light-noticetips&quot;: &quot;/components/light-noticetips/index&quot;,
-      &quot;c-header&quot;: &quot;../../components/c-header/c-header&quot;,
-      &quot;light-button&quot;: &quot;/components/light-button/index&quot;
+      &quot;light-noticetips&quot;: &quot;@cmlkit/light-ui/components/light-noticetips/light-noticetips&quot;
     }
   },
   &quot;wx&quot;: {
@@ -647,7 +639,7 @@ export default new LightNoticeTips();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-noticetips","level":"4.4","depth":1,"previous":{"title":"light-popup","level":"4.3","depth":1,"path":"components/light-popup.md","ref":"components/light-popup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-noticetips.md","mtime":"2020-02-26T09:39:15.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-noticetips","level":"4.4","depth":1,"previous":{"title":"light-popup","level":"4.3","depth":1,"path":"components/light-popup.md","ref":"components/light-popup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-noticetips.md","mtime":"2020-03-13T08:01:45.003Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

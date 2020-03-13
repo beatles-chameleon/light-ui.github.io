@@ -485,7 +485,6 @@
 <pre><code class="lang-vue">&lt;template&gt;
 &lt;page title=&quot;light-alert&quot;&gt;
   &lt;view class=&quot;container&quot;&gt;
-    &lt;c-header title=&quot;light-alert&quot;&gt;&lt;/c-header&gt;
     &lt;light-alert
       show=&quot;{{show}}&quot;
       title=&quot;&#x5F39;&#x6846;&#x6807;&#x9898;&quot;
@@ -497,14 +496,14 @@
       c-bind:close=&quot;handleClose&quot;
     &gt;&lt;/light-alert&gt;
     &lt;view class=&quot;operator&quot;&gt;
-      &lt;light-button text=&quot;show alert&quot; c-bind:onClick=&quot;showAlert&quot;&gt;&lt;/light-button&gt;
+      &lt;button text=&quot;&#x6253;&#x5F00;&#x5F39;&#x6846;&quot; c-bind:onclick=&quot;showAlert&quot;&gt;&lt;/button&gt;
     &lt;/view&gt;
   &lt;/view&gt;
 &lt;/page&gt;
 &lt;/template&gt;
 &lt;script&gt;
 import cml from &apos;chameleon-api&apos;;
-class LightButton {
+class LightAlert {
 
   data = {
     show: false,
@@ -515,6 +514,14 @@ class LightButton {
        },
       {
         text: &apos;&#x5F15;&#x5BFC;&#x6587;&#x6848;&apos;,
+        textStyle: &apos;color: #1D6EF0&apos;
+      },
+      {
+        text: &apos;&#x7B2C;&#x4E09;&#x4E2A;&#x6309;&#x94AE;&apos;,
+        textStyle: &apos;color: #1D6EF0&apos;
+      },
+      {
+        text: &apos;&#x7B2C;&#x56DB;&#x4E2A;&#x6309;&#x94AE;&apos;,
         textStyle: &apos;color: #1D6EF0&apos;
       }
     ]
@@ -563,7 +570,7 @@ class LightButton {
   }
 }
 
-export default new LightButton();
+export default new LightAlert();
 &lt;/script&gt;
 &lt;style scoped&gt;
 .container {
@@ -575,21 +582,35 @@ export default new LightButton();
 .operator {
   margin-top: 50cpx;
   padding: 20cpx;
-  align-items: center
 }
 &lt;/style&gt;
 &lt;script cml-type=&quot;json&quot;&gt;
 {
     &quot;base&quot;: {
         &quot;usingComponents&quot;: {
-          &quot;c-header&quot;: &quot;../../components/c-header/c-header&quot;,
-          &quot;light-alert&quot;: &quot;/components/light-alert/index&quot;,
-          &quot;light-button&quot;: &quot;/components/light-button/index&quot;
-        },
-        &quot;navigationBarTitleText&quot;: &quot;c-toast&quot;,
-        &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-        &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-    }
+          &quot;light-alert&quot;: &quot;@cmlkit/light-ui/components/light-alert/light-alert&quot;
+        }
+    },
+    &quot;wx&quot;: {
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
+  },
+  &quot;alipay&quot;: {
+    &quot;defaultTitle&quot;: &quot;index&quot;,
+    &quot;pullRefresh&quot;: false,
+    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
+    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
+  },
+  &quot;baidu&quot;: {
+    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;enablePullDownRefresh&quot;: false,
+    &quot;onReachBottomDistance&quot;: 50
+  }
 }
 &lt;/script&gt;
 </code></pre>
@@ -659,7 +680,7 @@ export default new LightButton();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-alert","level":"4.2","depth":1,"next":{"title":"light-popup","level":"4.3","depth":1,"path":"components/light-popup.md","ref":"components/light-popup.md","articles":[]},"previous":{"title":"light-toast","level":"4.1","depth":1,"path":"components/light-toast.md","ref":"components/light-toast.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-alert.md","mtime":"2020-02-26T09:38:43.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-alert","level":"4.2","depth":1,"next":{"title":"light-popup","level":"4.3","depth":1,"path":"components/light-popup.md","ref":"components/light-popup.md","articles":[]},"previous":{"title":"light-toast","level":"4.1","depth":1,"path":"components/light-toast.md","ref":"components/light-toast.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-alert.md","mtime":"2020-03-13T07:58:25.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -471,7 +471,6 @@
 <pre><code class="lang-vue">&lt;template&gt;
 &lt;page title=&quot;light-badge&quot;&gt;
   &lt;scroller height=&quot;{{-1}}&quot;&gt;
-    &lt;c-header title=&quot;light-badge&quot;&gt;&lt;/c-header&gt;
     &lt;view class=&quot;badge-container&quot; c-for=&quot;{{badgeData}}&quot;&gt;
       &lt;view class=&quot;badge-desc&quot;&gt;
         &lt;text&gt;{{item.desc}}&lt;/text&gt;
@@ -485,7 +484,7 @@
         offset=&quot;{{item.offset || [0, 0]}}&quot;
         show-zero=&quot;{{item.showZero || false}}&quot;
       &gt;
-        &lt;view style=&quot;width:100cpx;height:100cpx;border:1px solid black;&quot;&gt;&lt;/view&gt;
+        &lt;view style=&quot;width:100cpx;height:60cpx;border:1px solid #dcdfe6;border-radius:2cpx;display:flex;justify-content:center;align-items:center;&quot;&gt;&lt;text&gt;&#x8BC4;&#x8BBA;&lt;/text&gt;&lt;/view&gt;
       &lt;/light-badge&gt;
     &lt;/view&gt;
   &lt;/scroller&gt;
@@ -562,7 +561,9 @@ export default new LightBadge();
   flex-direction: row;
   height: 200cpx;
   align-items: center;
+  padding-left:70cpx;
   margin-bottom: 20cpx;
+  border:1px solid #dcdfe6;
 }
 .badge-desc {
   margin-right: 30cpx;
@@ -575,13 +576,29 @@ export default new LightBadge();
 {
     &quot;base&quot;: {
         &quot;usingComponents&quot;: {
-          &quot;c-header&quot;: &quot;../../components/c-header/c-header&quot;,
-          &quot;light-badge&quot;: &quot;/components/light-badge/index&quot;
-        },
-        &quot;navigationBarTitleText&quot;: &quot;c-toast&quot;,
-        &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-        &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-    }
+          &quot;light-badge&quot;: &quot;@cmlkit/light-ui/components/light-badge/light-badge&quot;
+        }
+    },
+    &quot;wx&quot;: {
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
+  },
+  &quot;alipay&quot;: {
+    &quot;defaultTitle&quot;: &quot;index&quot;,
+    &quot;pullRefresh&quot;: false,
+    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
+    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
+  },
+  &quot;baidu&quot;: {
+    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;enablePullDownRefresh&quot;: false,
+    &quot;onReachBottomDistance&quot;: 50
+  }
 }
 &lt;/script&gt;
 </code></pre>
@@ -651,7 +668,7 @@ export default new LightBadge();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-badge","level":"2.2","depth":1,"next":{"title":"light-bartips","level":"2.3","depth":1,"path":"components/light-bartips.md","ref":"components/light-bartips.md","articles":[]},"previous":{"title":"light-button","level":"2.1","depth":1,"path":"components/light-button.md","ref":"components/light-button.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-badge.md","mtime":"2020-02-26T09:39:15.371Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-badge","level":"2.2","depth":1,"next":{"title":"light-bartips","level":"2.3","depth":1,"path":"components/light-bartips.md","ref":"components/light-bartips.md","articles":[]},"previous":{"title":"light-button","level":"2.1","depth":1,"path":"components/light-button.md","ref":"components/light-button.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-badge.md","mtime":"2020-03-13T08:02:38.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -464,8 +464,14 @@
 <pre><code class="lang-vue">&lt;template&gt;
 &lt;page title=&quot;light-halfscreen&quot;&gt;
   &lt;view class=&quot;container&quot;&gt;
-    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center&quot;&gt;
-      &lt;text c-bind:tap=&quot;handleTap&quot;&gt;&#x6253;&#x5F00;&#x534A;&#x5C4F;&#x5F39;&#x7A97;&lt;/text&gt;
+    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center;height:100cpx;&quot;&gt;
+      &lt;text c-bind:tap=&quot;handleTap&quot;&gt;&#x6253;&#x5F00;&#x534A;&#x5C4F;&#x5F39;&#x7A97;-&#x4E24;&#x884C;&#x6807;&#x9898;&lt;/text&gt;
+    &lt;/view&gt;
+    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center;height:100cpx;&quot;&gt;
+      &lt;text c-bind:tap=&quot;handleTap1&quot;&gt;&#x6253;&#x5F00;&#x534A;&#x5C4F;&#x5F39;&#x7A97;-&#x4E00;&#x884C;&#x6807;&#x9898;&lt;/text&gt;
+    &lt;/view&gt;
+    &lt;view style=&quot;color:#35406B;display:flex;justify-content:center;align-items:center;height:100cpx;&quot;&gt;
+      &lt;text c-bind:tap=&quot;handleTap2&quot;&gt;&#x6253;&#x5F00;&#x534A;&#x5C4F;&#x5F39;&#x7A97;-&#x65E0;&#x526F;&#x6807;&#x9898;&lt;/text&gt;
     &lt;/view&gt;
 
     &lt;light-halfscreen 
@@ -475,13 +481,32 @@
       c-bind:cancel=&quot;handleCancel&quot;
       confirm-text=&quot;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&quot;
       cancel-text=&quot;&#x6B21;&#x8981;&#x64CD;&#x4F5C;&quot;
-      cancel-style=&quot;color:green&quot;
       main-title=&quot;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&quot;
       sub-title=&quot;&#x526F;&#x6807;&#x9898;&quot;
       &gt;
       &lt;view style=&quot;height:400cpx;&quot;&gt;&lt;text&gt;this is content&lt;/text&gt;&lt;/view&gt;
     &lt;/light-halfscreen&gt;
-
+    &lt;light-halfscreen 
+      show=&quot;{{halfShow1}}&quot; 
+      c-bind:close=&quot;closeHalfScreen1&quot;
+      c-bind:confirm=&quot;handleConfirm&quot;
+      c-bind:cancel=&quot;handleCancel&quot;
+      confirm-text=&quot;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&quot;
+      main-title=&quot;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&quot;
+      sub-title=&quot;&#x526F;&#x6807;&#x9898;&quot;
+      &gt;
+      &lt;view style=&quot;height:400cpx;&quot;&gt;&lt;text&gt;this is content&lt;/text&gt;&lt;/view&gt;
+    &lt;/light-halfscreen&gt;
+    &lt;light-halfscreen 
+      show=&quot;{{halfShow2}}&quot; 
+      c-bind:close=&quot;closeHalfScreen2&quot;
+      c-bind:confirm=&quot;handleConfirm&quot;
+      c-bind:cancel=&quot;handleCancel&quot;
+      confirm-text=&quot;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&quot;
+      main-title=&quot;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&#x6807;&#x9898;&#x4E3B;&quot;
+      &gt;
+      &lt;view style=&quot;height:400cpx;&quot;&gt;&lt;text&gt;this is content&lt;/text&gt;&lt;/view&gt;
+    &lt;/light-halfscreen&gt;
   &lt;/view&gt;
 &lt;/page&gt;
 &lt;/template&gt;
@@ -490,7 +515,8 @@ class LightHalfscreen {
 
   data = {
     halfShow:false,
-    imgSrc:require(&apos;../../../assets/images/chameleon.jpg&apos;)
+    halfShow1:false,
+    halfShow2:false,
   }
 
   computed = {
@@ -506,6 +532,18 @@ class LightHalfscreen {
     handleTap(){
       this.halfShow = true;
     },
+    closeHalfScreen1(){
+      this.halfShow1 = false;
+    },
+    handleTap1(){
+      this.halfShow1 = true;
+    },
+    closeHalfScreen2(){
+      this.halfShow2 = false;
+    },
+    handleTap2(){
+      this.halfShow2 = true;
+    },
     handleConfirm(){
       console.log(&apos;handleConfirm&apos;);
     },
@@ -519,7 +557,7 @@ class LightHalfscreen {
 export default new LightHalfscreen();
 &lt;/script&gt;
 &lt;style scoped lang=&quot;less&quot;&gt;
-@import &apos;../../../assets/css/var.less&apos;;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -535,12 +573,29 @@ export default new LightHalfscreen();
 {
     &quot;base&quot;: {
         &quot;usingComponents&quot;: {
-          &quot;light-halfscreen&quot;: &quot;/components/light-halfscreen/light-halfscreen&quot;
-        },
-        &quot;navigationBarTitleText&quot;: &quot;c-toast&quot;,
-        &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-        &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-    }
+          &quot;light-halfscreen&quot;: &quot;@cmlkit/light-ui/components/light-halfscreen/light-halfscreen&quot;
+        }
+    },
+    &quot;wx&quot;: {
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
+  },
+  &quot;alipay&quot;: {
+    &quot;defaultTitle&quot;: &quot;index&quot;,
+    &quot;pullRefresh&quot;: false,
+    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
+    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
+  },
+  &quot;baidu&quot;: {
+    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
+    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
+    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
+    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
+    &quot;enablePullDownRefresh&quot;: false,
+    &quot;onReachBottomDistance&quot;: 50
+  }
 }
 &lt;/script&gt;
 </code></pre>
@@ -610,7 +665,7 @@ export default new LightHalfscreen();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-halfscreen","level":"3.2","depth":1,"next":{"title":"light-actionsheetlist","level":"3.3","depth":1,"path":"components/ligth-actionsheetlist.md","ref":"components/ligth-actionsheetlist.md","articles":[]},"previous":{"title":"light-fullscreen","level":"3.1","depth":1,"path":"components/light-fullscreen.md","ref":"components/light-fullscreen.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-halfscreen.md","mtime":"2020-02-26T09:39:15.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-halfscreen","level":"3.2","depth":1,"next":{"title":"light-actionsheetlist","level":"3.3","depth":1,"path":"components/ligth-actionsheetlist.md","ref":"components/ligth-actionsheetlist.md","articles":[]},"previous":{"title":"light-fullscreen","level":"3.1","depth":1,"path":"components/light-fullscreen.md","ref":"components/light-fullscreen.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-halfscreen.md","mtime":"2020-03-13T08:01:35.167Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

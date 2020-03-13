@@ -482,23 +482,21 @@
 </tbody>
 </table>
 <h3 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
-<pre><code class="lang-vue">
-&lt;template&gt;
+<pre><code class="lang-vue">&lt;template&gt;
   &lt;page title=&quot;light-bartips&quot;&gt;
-   &lt;c-header title=&quot;light-bartips&quot;&gt;&lt;/c-header&gt;
    &lt;light-bartips
       show=&quot;{{show}}&quot;
       height=&quot;{{80}}&quot;
       icon=&quot;{{icon}}&quot;
       zIndex=&quot;{{99}}&quot;
       operate-icon=&quot;{{operateIcon}}&quot;
-      text=&quot;&#x6211;&#x662F;&#x6587;&#x6848;&#x8981;&#x7B80;&#x77ED;&#x5C45;&#x4E2D;&#x6211;&#x662F;&#x6587;&#x6848;&#x8981;&#x7B80;&#x77ED;&#x5C45;&#x4E2D;&quot;
+      text=&quot;&#x6211;&#x662F;&#x6587;&#x6848;&#x8981;&#x7B80;&#x77ED;&#x5C45;&#x4E2D;&#x6211;&#x662F;&#x6587;&#x6848;&#x8981;&#x7B80;&#x77ED;&#x5C45;&#x4E2D;&#x6211;&#x662F;&#x6587;&#x6848;&#x8981;&#x7B80;&#x77ED;&#x5C45;&#x4E2D;&#x6211;&#x662F;&#x6587;&#x6848;&#x8981;&#x7B80;&#x77ED;&#x5C45;&#x4E2D;&quot;
       c-bind:onclick=&quot;handleClick&quot;
       c-bind:operate=&quot;handleOperate&quot;
     &gt;
     &lt;/light-bartips&gt;  
     &lt;view class=&quot;operator&quot;&gt;
-      &lt;light-button c-bind:onClick=&quot;toogleShow&quot; text=&quot;&#x5207;&#x6362;bartips&#x72B6;&#x6001;&quot;&gt;&lt;/light-button&gt;
+      &lt;button c-bind:onclick=&quot;toogleShow&quot; text=&quot;&#x5207;&#x6362;bartips&#x72B6;&#x6001;&quot;&gt;&lt;/button&gt;
     &lt;/view&gt;
   &lt;/page&gt;
 &lt;/template&gt;
@@ -546,7 +544,6 @@ export default new LightBartips();
 .operator {
   margin-top: 40cpx;
   padding: 20cpx;
-  align-items: center;
 }
 &lt;/style&gt;
 
@@ -554,9 +551,7 @@ export default new LightBartips();
 {
   &quot;base&quot;: {
     &quot;usingComponents&quot;: {
-      &quot;light-bartips&quot;: &quot;/components/light-bartips/index&quot;,
-      &quot;c-header&quot;: &quot;../../components/c-header/c-header&quot;,
-      &quot;light-button&quot;: &quot;/components/light-button/index&quot;
+      &quot;light-bartips&quot;: &quot;@cmlkit/light-ui/components/light-bartips/light-bartips&quot;
     }
   },
   &quot;wx&quot;: {
@@ -648,7 +643,7 @@ export default new LightBartips();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-bartips","level":"2.3","depth":1,"next":{"title":"light-switch","level":"2.4","depth":1,"path":"components/light-switch.md","ref":"components/light-switch.md","articles":[]},"previous":{"title":"light-badge","level":"2.2","depth":1,"path":"components/light-badge.md","ref":"components/light-badge.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-bartips.md","mtime":"2020-02-26T09:39:15.371Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-26T10:13:59.638Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"light-bartips","level":"2.3","depth":1,"next":{"title":"light-switch","level":"2.4","depth":1,"path":"components/light-switch.md","ref":"components/light-switch.md","articles":[]},"previous":{"title":"light-badge","level":"2.2","depth":1,"path":"components/light-badge.md","ref":"components/light-badge.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-bartips.md","mtime":"2020-03-13T07:59:04.547Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
