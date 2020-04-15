@@ -1,707 +1,165 @@
-
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>light-popup · light-ui组件库</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>popup | LIGHT-UI</title>
+    <meta name="description" content="一套代码运行多端，一端所见即多端所见">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/light-ui.github.io/brand/logo.png">
     
-    <link rel="stylesheet" href="../gitbook/style.css">
+    <link rel="preload" href="/light-ui.github.io/assets/css/0.styles.9f456d75.css" as="style"><link rel="preload" href="/light-ui.github.io/assets/js/app.9a421712.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/21.5640e9a5.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/1.0caf9429.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/15.b7efc2f0.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/2.ba696d41.js" as="script"><link rel="prefetch" href="/light-ui.github.io/assets/js/10.74d6be8c.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/11.4da11aa8.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/12.5c85a3e5.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/13.c69cbd96.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/14.eb942431.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/16.009a3c10.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/17.75f02aa9.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/18.0f37baee.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/19.5dcede3b.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/20.b6634bff.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/22.7e38fd07.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/23.eabf1882.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/24.1ff6d285.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/25.56b0e23a.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/4.e89bf330.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/5.bb532bfa.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/6.622db75b.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/7.ae1d5bb6.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/8.654d223e.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/9.c4dbe764.js">
+    <link rel="stylesheet" href="/light-ui.github.io/assets/css/0.styles.9f456d75.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/light-ui.github.io/" class="home-link router-link-active"><img src="/light-ui.github.io/brand/logo.png" alt="LIGHT-UI" class="logo"> <span class="site-name can-hide">LIGHT-UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/light-ui.github.io/components/" class="nav-link router-link-active">
+  组件文档
+</a></div><div class="nav-item"><a href="https://github.com/chameleon-team/light-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/light-ui.github.io/components/" class="nav-link router-link-active">
+  组件文档
+</a></div><div class="nav-item"><a href="https://github.com/chameleon-team/light-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/light-ui.github.io/components/base" class="sidebar-heading clickable open"><span>LIGHT-UI</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>基础组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/light-ui.github.io/components/light-button.html" class="sidebar-link">button</a></li><li><a href="/light-ui.github.io/components/light-badge.html" class="sidebar-link">badge</a></li><li><a href="/light-ui.github.io/components/light-bartips.html" class="sidebar-link">bartips</a></li><li><a href="/light-ui.github.io/components/light-switch.html" class="sidebar-link">switch</a></li><li><a href="/light-ui.github.io/components/light-checkbox.html" class="sidebar-link">checkbox</a></li><li><a href="/light-ui.github.io/components/light-checkboxcard.html" class="sidebar-link">checkboxcard</a></li><li><a href="/light-ui.github.io/components/light-checklabel.html" class="sidebar-link">checkboxlabel</a></li><li><a href="/light-ui.github.io/components/light-checklabelcard.html" class="sidebar-link">checkboxlabelcard</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>弹层组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/light-ui.github.io/components/light-fullscreen.html" class="sidebar-link">fullscreen</a></li><li><a href="/light-ui.github.io/components/light-halfscreen.html" class="sidebar-link">halfscreen</a></li><li><a href="/light-ui.github.io/components/ligth-actionsheetlist.html" class="sidebar-link">actionsheetlist</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>提示组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/light-ui.github.io/components/light-toast.html" class="sidebar-link">toast</a></li><li><a href="/light-ui.github.io/components/light-alert.html" class="sidebar-link">alert</a></li><li><a href="/light-ui.github.io/components/light-popup.html" class="active sidebar-link">popup</a></li><li><a href="/light-ui.github.io/components/light-noticetips.html" class="sidebar-link">noticetips</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="popup"><a href="#popup" class="header-anchor">#</a> popup</h1> <hr> <p>通用弹出层， alert、fullscreen、halfscreen、bartips等组件基于此组件构建</p> <h3 id="属性"><a href="#属性" class="header-anchor">#</a> 属性</h3> <table><thead><tr><th>属性名</th> <th>类型</th> <th>必填</th> <th>默认值</th> <th>说明</th></tr></thead> <tbody><tr><td>show</td> <td>Boolean</td> <td>否</td> <td>false</td> <td>是否显示弹出层</td></tr> <tr><td>mask</td> <td>Boolean</td> <td>否</td> <td>true</td> <td>是否展示黑色蒙层，当mask为false时，页面的其余部分是可操作的</td></tr> <tr><td>zIndex</td> <td>Number</td> <td>否</td> <td>9</td> <td>弹出层的z-index</td></tr> <tr><td>position</td> <td>String</td> <td>否</td> <td>bottom</td> <td>弹出层弹出的方向，可选值 ['top', 'left', 'right', 'bottom', 'center']， 其中left/right时容器必须指定宽度， top/bottom时容器必须指定高度</td></tr> <tr><td>transition</td> <td>Boolean</td> <td>否</td> <td>true</td> <td>弹出层弹出时是否开启动画，默认开启</td></tr> <tr><td>c-bind:close</td> <td>EventHandle</td> <td>否</td> <td></td> <td>点击蒙层时触发的事件</td></tr></tbody></table> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>page</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>light-popup<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>light-popup</span>
+      <span class="token attr-name">show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{show}}<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{position}}<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">mask</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{true}}<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">transition</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{true}}<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name"><span class="token namespace">c-bind:</span>close</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hidePopup<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token punctuation">{</span><span class="token punctuation">{</span>contentStyle<span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span> <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name"><span class="token namespace">c-bind:</span>tap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hidePopup<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>点击关闭popup<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>light-popup</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>operator<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">c-bind:</span>onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>toogleShow<span class="token punctuation">&quot;</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>popup:left/top/right/bottom/center<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>page</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight-code/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code3/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">const</span> direction <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'left'</span><span class="token punctuation">,</span> <span class="token string">'top'</span><span class="token punctuation">,</span> <span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token string">'bottom'</span><span class="token punctuation">,</span> <span class="token string">'center'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> clickTime <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-    
+<span class="token keyword">class</span> <span class="token class-name">LightBartips</span>   <span class="token punctuation">{</span>
 
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+  data <span class="token operator">=</span> <span class="token punctuation">{</span>
+    icon<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    position<span class="token operator">:</span> direction<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+  computed <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">contentStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> style <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>position<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">'right'</span><span class="token operator">:</span>
+        <span class="token keyword">case</span> <span class="token string">'left'</span><span class="token operator">:</span> 
+          style <span class="token operator">+=</span> <span class="token string">&quot;width: 300cpx;&quot;</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">'top'</span><span class="token operator">:</span>
+        <span class="token keyword">case</span> <span class="token string">'bottom'</span><span class="token operator">:</span>
+          style <span class="token operator">+=</span> <span class="token string">&quot;height: 300cpx;&quot;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token operator">:</span>
+          style <span class="token operator">+=</span> <span class="token string">'height:300cpx;width:600cpx;'</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> style<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+  <span class="token punctuation">}</span>
 
-    
-    <link rel="next" href="light-noticetips.html" />
-    
-    
-    <link rel="prev" href="light-alert.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
-
-            
-                <nav role="navigation">
-                
+  methods <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">toogleShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>position <span class="token operator">=</span> direction<span class="token punctuation">[</span>clickTime <span class="token operator">%</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token operator">++</span>clickTime<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>show <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>show<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">hidePopup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>show <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
 
-<ul class="summary">
-    
-    
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
 
-    
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">LightBartips</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
-    
-        
-        <li class="header">Introduction</li>
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    Introduction
-            
-                </a>
-            
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #f8f8f8<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.content</span> <span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.operator</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 50cpx<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 20cpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
 
-            
-        </li>
-    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">cml-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>json<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;base&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;usingComponents&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;light-popup&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@cmlkit/light-ui/components/light-popup/light-popup&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;wx&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#E2E2E2&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;alipay&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;defaultTitle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;pullRefresh&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;allowsBounceVertical&quot;</span><span class="token operator">:</span> <span class="token string">&quot;YES&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;titleBarColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;baidu&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;navigationBarBackgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;navigationBarTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;enablePullDownRefresh&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;onReachBottomDistance&quot;</span><span class="token operator">:</span> <span class="token number">50</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
-    
-        
-        <li class="header">基础组件</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="light-button.html">
-            
-                <a href="light-button.html">
-            
-                    
-                    light-button
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="light-badge.html">
-            
-                <a href="light-badge.html">
-            
-                    
-                    light-badge
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="light-bartips.html">
-            
-                <a href="light-bartips.html">
-            
-                    
-                    light-bartips
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.4" data-path="light-switch.html">
-            
-                <a href="light-switch.html">
-            
-                    
-                    light-switch
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.5" data-path="light-checkbox.html">
-            
-                <a href="light-checkbox.html">
-            
-                    
-                    light-checkbox
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.6" data-path="light-checkboxcard.html">
-            
-                <a href="light-checkboxcard.html">
-            
-                    
-                    light-checkboxcard
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.7" data-path="light-checklabel.html">
-            
-                <a href="light-checklabel.html">
-            
-                    
-                    light-checklabel
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.8" data-path="light-checklabelcard.html">
-            
-                <a href="light-checklabelcard.html">
-            
-                    
-                    light-checklabelcard
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">弹层组件</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="light-fullscreen.html">
-            
-                <a href="light-fullscreen.html">
-            
-                    
-                    light-fullscreen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="light-halfscreen.html">
-            
-                <a href="light-halfscreen.html">
-            
-                    
-                    light-halfscreen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="ligth-actionsheetlist.html">
-            
-                <a href="ligth-actionsheetlist.html">
-            
-                    
-                    light-actionsheetlist
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">提示组件</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="light-toast.html">
-            
-                <a href="light-toast.html">
-            
-                    
-                    light-toast
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="light-alert.html">
-            
-                <a href="light-alert.html">
-            
-                    
-                    light-alert
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="4.3" data-path="light-popup.html">
-            
-                <a href="light-popup.html">
-            
-                    
-                    light-popup
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="light-noticetips.html">
-            
-                <a href="light-noticetips.html">
-            
-                    
-                    light-noticetips
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >light-popup</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#popup"><b></b>popup</a></li><ul><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x5C5E;&#x6027;"><b></b>&#x5C5E;&#x6027;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x793A;&#x4F8B;"><b></b>&#x793A;&#x4F8B;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x6548;&#x679C;&#x56FE;"><b></b>&#x6548;&#x679C;&#x56FE;</a></li></ul></ul></ul></div><a href="#popup" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="popup"><a name="popup" class="anchor-navigation-ex-anchor" href="#popup"><i class="fa fa-link" aria-hidden="true"></i></a><a name="popup" class="plugin-anchor" href="#popup"><i class="fa fa-link" aria-hidden="true"></i></a>popup</h1>
-<hr>
-<p>&#x901A;&#x7528;&#x5F39;&#x51FA;&#x5C42;&#xFF0C; alert&#x3001;fullscreen&#x3001;halfscreen&#x3001;bartips&#x7B49;&#x7EC4;&#x4EF6;&#x57FA;&#x4E8E;&#x6B64;&#x7EC4;&#x4EF6;&#x6784;&#x5EFA;</p>
-<h3 id="&#x5C5E;&#x6027;"><a name="&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C5E;&#x6027;" class="plugin-anchor" href="#&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;</h3>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>show</td>
-<td>Boolean</td>
-<td>&#x5426;</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x663E;&#x793A;&#x5F39;&#x51FA;&#x5C42;</td>
-</tr>
-<tr>
-<td>mask</td>
-<td>Boolean</td>
-<td>&#x5426;</td>
-<td>true</td>
-<td>&#x662F;&#x5426;&#x5C55;&#x793A;&#x9ED1;&#x8272;&#x8499;&#x5C42;&#xFF0C;&#x5F53;mask&#x4E3A;false&#x65F6;&#xFF0C;&#x9875;&#x9762;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x662F;&#x53EF;&#x64CD;&#x4F5C;&#x7684;</td>
-</tr>
-<tr>
-<td>zIndex</td>
-<td>Number</td>
-<td>&#x5426;</td>
-<td>9</td>
-<td>&#x5F39;&#x51FA;&#x5C42;&#x7684;z-index</td>
-</tr>
-<tr>
-<td>position</td>
-<td>String</td>
-<td>&#x5426;</td>
-<td>bottom</td>
-<td>&#x5F39;&#x51FA;&#x5C42;&#x5F39;&#x51FA;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x53EF;&#x9009;&#x503C; [&apos;top&apos;, &apos;left&apos;, &apos;right&apos;, &apos;bottom&apos;, &apos;center&apos;]&#xFF0C; &#x5176;&#x4E2D;left/right&#x65F6;&#x5BB9;&#x5668;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#xFF0C; top/bottom&#x65F6;&#x5BB9;&#x5668;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x9AD8;&#x5EA6;</td>
-</tr>
-<tr>
-<td>transition</td>
-<td>Boolean</td>
-<td>&#x5426;</td>
-<td>true</td>
-<td>&#x5F39;&#x51FA;&#x5C42;&#x5F39;&#x51FA;&#x65F6;&#x662F;&#x5426;&#x5F00;&#x542F;&#x52A8;&#x753B;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;</td>
-</tr>
-<tr>
-<td>c-bind:close</td>
-<td>EventHandle</td>
-<td>&#x5426;</td>
-<td></td>
-<td>&#x70B9;&#x51FB;&#x8499;&#x5C42;&#x65F6;&#x89E6;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
-<pre><code class="lang-vue">&lt;template&gt;
-  &lt;page title=&quot;light-popup&quot;&gt;
-    &lt;light-popup
-      show=&quot;{{show}}&quot;
-      position=&quot;{{position}}&quot;
-      mask=&quot;{{true}}&quot;
-      transition=&quot;{{true}}&quot;
-      c-bind:close=&quot;hidePopup&quot;
-    &gt;
-     &lt;view style=&quot;{{contentStyle}}&quot; class=&quot;content&quot; &gt;
-        &lt;text c-bind:tap=&quot;hidePopup&quot;&gt;&#x70B9;&#x51FB;&#x5173;&#x95ED;popup&lt;/text&gt;
-      &lt;/view&gt;
-    &lt;/light-popup&gt;
-    &lt;view class=&quot;operator&quot;&gt;
-      &lt;button c-bind:onclick=&quot;toogleShow&quot; text=&quot;popup:left/top/right/bottom/center&quot;&gt;&lt;/button&gt;
-    &lt;/view&gt;
-  &lt;/page&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-const direction = [&apos;left&apos;, &apos;top&apos;, &apos;right&apos;, &apos;bottom&apos;, &apos;center&apos;];
-let clickTime = 0;
-
-class LightBartips   {
-
-  data = {
-    icon: &apos;&apos;,
-    show: false,
-    position: direction[0],
-  }
-  computed = {
-    contentStyle() {
-      let style = &apos;&apos;;
-      switch (this.position) {
-        case &apos;right&apos;:
-        case &apos;left&apos;: 
-          style += &quot;width: 300cpx;&quot;;
-          break;
-        case &apos;top&apos;:
-        case &apos;bottom&apos;:
-          style += &quot;height: 300cpx;&quot;
-          break;
-        default:
-          style += &apos;height:300cpx;width:600cpx;&apos;
-          break;
-      }
-      return style;
-    }
-
-  }
-
-  methods = {
-    toogleShow() {
-      this.position = direction[clickTime % 5];
-      ++clickTime;
-      this.show = !this.show;
-    },
-    hidePopup() {
-      this.show = false;
-    }
-
-
-  }
-
-}
-
-export default new LightBartips();
-&lt;/script&gt;
-
-&lt;style&gt;
-.container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background: #f8f8f8;
-}
-.content {
-  justify-content: center;
-  align-items: center;
-  background: #FFFFFF;
-}
-.operator {
-  margin-top: 50cpx;
-  padding: 20cpx;
-}
-&lt;/style&gt;
-
-&lt;script cml-type=&quot;json&quot;&gt;
-{
-  &quot;base&quot;: {
-    &quot;usingComponents&quot;: {
-      &quot;light-popup&quot;: &quot;@cmlkit/light-ui/components/light-popup/light-popup&quot;
-    }
-  },
-  &quot;wx&quot;: {
-    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
-    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-  },
-  &quot;alipay&quot;: {
-    &quot;defaultTitle&quot;: &quot;index&quot;,
-    &quot;pullRefresh&quot;: false,
-    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
-    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
-  },
-  &quot;baidu&quot;: {
-    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
-    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
-    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
-    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
-    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-    &quot;enablePullDownRefresh&quot;: false,
-    &quot;onReachBottomDistance&quot;: 50
-  }
-}
-&lt;/script&gt;
-</code></pre>
-<h3 id="&#x6548;&#x679C;&#x56FE;"><a name="&#x6548;&#x679C;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x6548;&#x679C;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6548;&#x679C;&#x56FE;" class="plugin-anchor" href="#&#x6548;&#x679C;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6548;&#x679C;&#x56FE;</h3>
-<table>
-<thead>
-<tr>
-<th>web</th>
-<th>weex</th>
-<th>wx</th>
-<th>alipay</th>
-<th>baidu</th>
-<th>qq</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="../assets/images/web/web-popup.png" width="200px"></td>
-<td><img src="../assets/images/weex/weex-popup.jpg" width="200px"></td>
-<td><img src="../assets/images/wx/wx-popup.png" width="200px"></td>
-<td><img src="../assets/images/alipay/ali-popup.png" width="200px"></td>
-<td><img src="../assets/images/baidu/baidu-popup.png" width="200px"></td>
-<td><img src="../assets/images/qq/qq-popup.png" width="200px"></td>
-</tr>
-</tbody>
-</table>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
-            </div>
-
-            
-                
-                <a href="light-alert.html" class="navigation navigation-prev " aria-label="Previous page: light-alert">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="light-noticetips.html" class="navigation navigation-next " aria-label="Next page: light-noticetips">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-popup","level":"4.3","depth":1,"next":{"title":"light-noticetips","level":"4.4","depth":1,"path":"components/light-noticetips.md","ref":"components/light-noticetips.md","articles":[]},"previous":{"title":"light-alert","level":"4.2","depth":1,"path":"components/light-alert.md","ref":"components/light-alert.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-popup.md","mtime":"2020-03-13T08:01:57.852Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
-
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
-        
-    
-        
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-code3/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</code></pre></div><h3 id="效果图"><a href="#效果图" class="header-anchor">#</a> 效果图</h3> <table><thead><tr><th>web</th> <th>weex</th> <th>wx</th> <th>alipay</th> <th>baidu</th> <th>qq</th></tr></thead> <tbody><tr><td><img src="/light-ui.github.io/assets/img/web-popup.0c9ee853.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/weex-popup.ccd3e5ad.jpg" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/wx-popup.1a83d853.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/ali-popup.0a8cfa98.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/baidu-popup.dcd20fa8.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/qq-popup.aa3cf5f7.png" width="200px"></td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/light-ui.github.io/components/light-alert.html" class="prev">
+        alert
+      </a></span> <span class="next"><a href="/light-ui.github.io/components/light-noticetips.html">
+        noticetips
+      </a>
+      →
+    </span></p></div> <footer class="footer" data-v-3d08467a><div class="content" data-v-3d08467a><div class="left" data-v-3d08467a><a href="/" class="brand" data-v-3d08467a><span data-v-3d08467a>Light-UI</span></a> <div class="info" data-v-3d08467a>Copyright © 2020 DiDi Chuxing Inc.</div></div> <div class="right" data-v-3d08467a><div class="col" data-v-3d08467a><h4 data-v-3d08467a>其他资源</h4> <a href="/components/expand.html" data-v-3d08467a>Chameleon UI</a><a href="https://github.com/beatles-chameleon/cml-demo" target="_blank" rel="noopener" data-v-3d08467a>
+              Chameleon Demo
+            </a><a href="https://github.com/chameleon-team/awesome-cml" target="_blank" rel="noopener" data-v-3d08467a>
+              Awesome Chameleon
+            </a></div><div class="col" data-v-3d08467a><h4 data-v-3d08467a>社区</h4> <a href="https://github.com/didi/chameleon/issues" target="_blank" rel="noopener" data-v-3d08467a>
+              GitHub
+            </a><a data-v-3d08467a><span data-v-3d08467a>微信交流群</span> <img src="/light-ui.github.io/assets/img/qr_weixin.59cd000a.png" alt="image" data-v-3d08467a></a><a data-v-3d08467a><span data-v-3d08467a>QQ 交流群</span> <img src="/light-ui.github.io/assets/img/qr_qq.115678d7.jpg" alt="image" data-v-3d08467a></a><a data-v-3d08467a><span data-v-3d08467a>顺风公鹿</span> <img src="/light-ui.github.io/assets/img/qr_deer.e2ddb653.png" alt="image" data-v-3d08467a></a></div><div class="col" data-v-3d08467a><h4 data-v-3d08467a>关于</h4> <a href="https://github.com/didi/chameleon/wiki/Chameleon%E5%9B%A2%E9%98%9F" target="_blank" rel="noopener" data-v-3d08467a>
+              Chameleon 团队
+            </a><a href="https://github.com/didi/chameleon/wiki/%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC" target="_blank" rel="noopener" data-v-3d08467a>
+              加入我们
+            </a><a href="mailto:CML@didichuxing.com" target="_blank" rel="noopener" data-v-3d08467a>
+              联系我们
+            </a><a href="https://github.com/didi/chameleon/wiki/Contributors" target="_blank" rel="noopener" data-v-3d08467a>
+              贡献者
+            </a></div></div></div></footer></main></div><div class="global-ui"><!----></div></div>
+    <script src="/light-ui.github.io/assets/js/app.9a421712.js" defer></script><script src="/light-ui.github.io/assets/js/21.5640e9a5.js" defer></script><script src="/light-ui.github.io/assets/js/1.0caf9429.js" defer></script><script src="/light-ui.github.io/assets/js/15.b7efc2f0.js" defer></script><script src="/light-ui.github.io/assets/js/2.ba696d41.js" defer></script>
+  </body>
 </html>
-

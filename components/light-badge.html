@@ -1,731 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>badge | LIGHT-UI</title>
+    <meta name="description" content="一套代码运行多端，一端所见即多端所见">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/light-ui.github.io/brand/logo.png">
+    
+    <link rel="preload" href="/light-ui.github.io/assets/css/0.styles.9f456d75.css" as="style"><link rel="preload" href="/light-ui.github.io/assets/js/app.9a421712.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/21.5640e9a5.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/1.0caf9429.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/5.bb532bfa.js" as="script"><link rel="preload" href="/light-ui.github.io/assets/js/2.ba696d41.js" as="script"><link rel="prefetch" href="/light-ui.github.io/assets/js/10.74d6be8c.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/11.4da11aa8.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/12.5c85a3e5.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/13.c69cbd96.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/14.eb942431.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/15.b7efc2f0.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/16.009a3c10.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/17.75f02aa9.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/18.0f37baee.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/19.5dcede3b.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/20.b6634bff.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/22.7e38fd07.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/23.eabf1882.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/24.1ff6d285.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/25.56b0e23a.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/4.e89bf330.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/6.622db75b.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/7.ae1d5bb6.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/8.654d223e.js"><link rel="prefetch" href="/light-ui.github.io/assets/js/9.c4dbe764.js">
+    <link rel="stylesheet" href="/light-ui.github.io/assets/css/0.styles.9f456d75.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/light-ui.github.io/" class="home-link router-link-active"><img src="/light-ui.github.io/brand/logo.png" alt="LIGHT-UI" class="logo"> <span class="site-name can-hide">LIGHT-UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/light-ui.github.io/components/" class="nav-link router-link-active">
+  组件文档
+</a></div><div class="nav-item"><a href="https://github.com/chameleon-team/light-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/light-ui.github.io/components/" class="nav-link router-link-active">
+  组件文档
+</a></div><div class="nav-item"><a href="https://github.com/chameleon-team/light-ui" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/light-ui.github.io/components/base" class="sidebar-heading clickable open"><span>LIGHT-UI</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>基础组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/light-ui.github.io/components/light-button.html" class="sidebar-link">button</a></li><li><a href="/light-ui.github.io/components/light-badge.html" class="active sidebar-link">badge</a></li><li><a href="/light-ui.github.io/components/light-bartips.html" class="sidebar-link">bartips</a></li><li><a href="/light-ui.github.io/components/light-switch.html" class="sidebar-link">switch</a></li><li><a href="/light-ui.github.io/components/light-checkbox.html" class="sidebar-link">checkbox</a></li><li><a href="/light-ui.github.io/components/light-checkboxcard.html" class="sidebar-link">checkboxcard</a></li><li><a href="/light-ui.github.io/components/light-checklabel.html" class="sidebar-link">checkboxlabel</a></li><li><a href="/light-ui.github.io/components/light-checklabelcard.html" class="sidebar-link">checkboxlabelcard</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>弹层组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/light-ui.github.io/components/light-fullscreen.html" class="sidebar-link">fullscreen</a></li><li><a href="/light-ui.github.io/components/light-halfscreen.html" class="sidebar-link">halfscreen</a></li><li><a href="/light-ui.github.io/components/ligth-actionsheetlist.html" class="sidebar-link">actionsheetlist</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>提示组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/light-ui.github.io/components/light-toast.html" class="sidebar-link">toast</a></li><li><a href="/light-ui.github.io/components/light-alert.html" class="sidebar-link">alert</a></li><li><a href="/light-ui.github.io/components/light-popup.html" class="sidebar-link">popup</a></li><li><a href="/light-ui.github.io/components/light-noticetips.html" class="sidebar-link">noticetips</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="badge"><a href="#badge" class="header-anchor">#</a> badge</h1> <hr> <p>徽章</p> <h3 id="属性"><a href="#属性" class="header-anchor">#</a> 属性</h3> <table><thead><tr><th>属性名</th> <th>类型</th> <th>必填</th> <th>默认值</th> <th>说明</th></tr></thead> <tbody><tr><td>value</td> <td>Number/String</td> <td>否</td> <td>0</td> <td>badge上显示的数值</td></tr> <tr><td>max</td> <td>Number/String</td> <td>否</td> <td>99</td> <td>最大值，超过该值显示加号</td></tr> <tr><td>showZero</td> <td>Boolean</td> <td>否</td> <td>false</td> <td>当传进来value为零时， 是否显示badge</td></tr> <tr><td>isDot</td> <td>Boolean</td> <td>否</td> <td>false</td> <td>是否显示为一个点</td></tr> <tr><td>theme</td> <td>String</td> <td>否</td> <td>#ED5050</td> <td>颜色主题色值</td></tr> <tr><td>size</td> <td>String</td> <td>否</td> <td>large</td> <td>badge的size， 支持large、small两种，其中large的尺寸为32✖️32, small的尺寸为24✖️24，单位cpx</td></tr> <tr><td>offset</td> <td>Array</td> <td>否</td> <td>[0, 0]</td> <td>相对于原始位置的偏移量，单位为cpx,原始位置默认右上角切线交点</td></tr></tbody></table> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>page</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>light-badge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scroller</span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{-1}}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>badge-container<span class="token punctuation">&quot;</span></span> <span class="token attr-name">c-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{badgeData}}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>badge-desc<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>{{item.desc}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>light-badge</span> 
+        <span class="token attr-name">is-dot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.isDot || false}}<span class="token punctuation">&quot;</span></span> 
+        <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.size || 'large'}}<span class="token punctuation">&quot;</span></span> 
+        <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.value}}<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.max || 99}}<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">theme</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.theme || '#ED5050'}}<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">offset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.offset || [0, 0]}}<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">show-zero</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{item.showZero || false}}<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span>100cpx<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span>60cpx<span class="token punctuation">;</span><span class="token property">border</span><span class="token punctuation">:</span>1px solid #dcdfe6<span class="token punctuation">;</span><span class="token property">border-radius</span><span class="token punctuation">:</span>2cpx<span class="token punctuation">;</span><span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span><span class="token property">justify-content</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span><span class="token property">align-items</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span>评论<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>light-badge</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scroller</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>page</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">class</span> <span class="token class-name">LightBadge</span> <span class="token punctuation">{</span>
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>light-badge · light-ui组件库</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  data <span class="token operator">=</span> <span class="token punctuation">{</span>
+    badgeData<span class="token operator">:</span><span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'普通badge'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'红点类型badge'</span><span class="token punctuation">,</span>
+        isDot<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'自定义颜色badge'</span><span class="token punctuation">,</span>
+        theme<span class="token operator">:</span> <span class="token string">'green'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">99</span><span class="token punctuation">,</span>
+        max<span class="token operator">:</span> <span class="token number">999</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'value撑开的badge'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'888'</span><span class="token punctuation">,</span>
+        max<span class="token operator">:</span> <span class="token number">999</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'文本类型的badge'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'hot!'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'小的badge'</span><span class="token punctuation">,</span>
+        size<span class="token operator">:</span> <span class="token string">'small'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">8</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'超出最大范围的badge'</span><span class="token punctuation">,</span>
+        max<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'50'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'自定义位置的badge'</span><span class="token punctuation">,</span>
+        offset<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">33</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'value为0时隐藏badge'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        showZero<span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        desc<span class="token operator">:</span> <span class="token string">'value为0时显示badge'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        showZero<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight-code/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code3/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">LightBadge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #f8f8f8<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.badge-container</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200cpx<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">padding-left</span><span class="token punctuation">:</span>70cpx<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20cpx<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span>1px solid #dcdfe6<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.badge-desc</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span> 30cpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.btn</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 20cpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">cml-type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>json<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token punctuation">{</span>
+    <span class="token string">&quot;base&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;usingComponents&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;light-badge&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@cmlkit/light-ui/components/light-badge/light-badge&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;wx&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#E2E2E2&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;alipay&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;defaultTitle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;pullRefresh&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;allowsBounceVertical&quot;</span><span class="token operator">:</span> <span class="token string">&quot;YES&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;titleBarColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;baidu&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;navigationBarBackgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;navigationBarTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;backgroundTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;enablePullDownRefresh&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;onReachBottomDistance&quot;</span><span class="token operator">:</span> <span class="token number">50</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="light-bartips.html" />
-    
-    
-    <link rel="prev" href="light-button.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
-
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        <li class="header">Introduction</li>
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    Introduction
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">基础组件</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="light-button.html">
-            
-                <a href="light-button.html">
-            
-                    
-                    light-button
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="2.2" data-path="light-badge.html">
-            
-                <a href="light-badge.html">
-            
-                    
-                    light-badge
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="light-bartips.html">
-            
-                <a href="light-bartips.html">
-            
-                    
-                    light-bartips
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.4" data-path="light-switch.html">
-            
-                <a href="light-switch.html">
-            
-                    
-                    light-switch
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.5" data-path="light-checkbox.html">
-            
-                <a href="light-checkbox.html">
-            
-                    
-                    light-checkbox
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.6" data-path="light-checkboxcard.html">
-            
-                <a href="light-checkboxcard.html">
-            
-                    
-                    light-checkboxcard
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.7" data-path="light-checklabel.html">
-            
-                <a href="light-checklabel.html">
-            
-                    
-                    light-checklabel
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.8" data-path="light-checklabelcard.html">
-            
-                <a href="light-checklabelcard.html">
-            
-                    
-                    light-checklabelcard
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">弹层组件</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="light-fullscreen.html">
-            
-                <a href="light-fullscreen.html">
-            
-                    
-                    light-fullscreen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="light-halfscreen.html">
-            
-                <a href="light-halfscreen.html">
-            
-                    
-                    light-halfscreen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="ligth-actionsheetlist.html">
-            
-                <a href="ligth-actionsheetlist.html">
-            
-                    
-                    light-actionsheetlist
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">提示组件</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="light-toast.html">
-            
-                <a href="light-toast.html">
-            
-                    
-                    light-toast
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="light-alert.html">
-            
-                <a href="light-alert.html">
-            
-                    
-                    light-alert
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="light-popup.html">
-            
-                <a href="light-popup.html">
-            
-                    
-                    light-popup
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="light-noticetips.html">
-            
-                <a href="light-noticetips.html">
-            
-                    
-                    light-noticetips
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >light-badge</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#badge"><b></b>badge</a></li><ul><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x5C5E;&#x6027;"><b></b>&#x5C5E;&#x6027;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x793A;&#x4F8B;"><b></b>&#x793A;&#x4F8B;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x6548;&#x679C;&#x56FE;"><b></b>&#x6548;&#x679C;&#x56FE;</a></li></ul></ul></ul></div><a href="#badge" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="badge"><a name="badge" class="anchor-navigation-ex-anchor" href="#badge"><i class="fa fa-link" aria-hidden="true"></i></a><a name="badge" class="plugin-anchor" href="#badge"><i class="fa fa-link" aria-hidden="true"></i></a>badge</h1>
-<hr>
-<p>&#x5FBD;&#x7AE0;</p>
-<h3 id="&#x5C5E;&#x6027;"><a name="&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C5E;&#x6027;" class="plugin-anchor" href="#&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;</h3>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x5FC5;&#x586B;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>value</td>
-<td>Number/String</td>
-<td>&#x5426;</td>
-<td>0</td>
-<td>badge&#x4E0A;&#x663E;&#x793A;&#x7684;&#x6570;&#x503C;</td>
-</tr>
-<tr>
-<td>max</td>
-<td>Number/String</td>
-<td>&#x5426;</td>
-<td>99</td>
-<td>&#x6700;&#x5927;&#x503C;&#xFF0C;&#x8D85;&#x8FC7;&#x8BE5;&#x503C;&#x663E;&#x793A;&#x52A0;&#x53F7;</td>
-</tr>
-<tr>
-<td>showZero</td>
-<td>Boolean</td>
-<td>&#x5426;</td>
-<td>false</td>
-<td>&#x5F53;&#x4F20;&#x8FDB;&#x6765;value&#x4E3A;&#x96F6;&#x65F6;&#xFF0C; &#x662F;&#x5426;&#x663E;&#x793A;badge</td>
-</tr>
-<tr>
-<td>isDot</td>
-<td>Boolean</td>
-<td>&#x5426;</td>
-<td>false</td>
-<td>&#x662F;&#x5426;&#x663E;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x70B9;</td>
-</tr>
-<tr>
-<td>theme</td>
-<td>String</td>
-<td>&#x5426;</td>
-<td>#ED5050</td>
-<td>&#x989C;&#x8272;&#x4E3B;&#x9898;&#x8272;&#x503C;</td>
-</tr>
-<tr>
-<td>size</td>
-<td>String</td>
-<td>&#x5426;</td>
-<td>large</td>
-<td>badge&#x7684;size&#xFF0C; &#x652F;&#x6301;large&#x3001;small&#x4E24;&#x79CD;&#xFF0C;&#x5176;&#x4E2D;large&#x7684;&#x5C3A;&#x5BF8;&#x4E3A;32&#x2716;&#xFE0F;32, small&#x7684;&#x5C3A;&#x5BF8;&#x4E3A;24&#x2716;&#xFE0F;24&#xFF0C;&#x5355;&#x4F4D;cpx</td>
-</tr>
-<tr>
-<td>offset</td>
-<td>Array</td>
-<td>&#x5426;</td>
-<td>[0, 0]</td>
-<td>&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x59CB;&#x4F4D;&#x7F6E;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;cpx,&#x539F;&#x59CB;&#x4F4D;&#x7F6E;&#x9ED8;&#x8BA4;&#x53F3;&#x4E0A;&#x89D2;&#x5207;&#x7EBF;&#x4EA4;&#x70B9;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
-<pre><code class="lang-vue">&lt;template&gt;
-&lt;page title=&quot;light-badge&quot;&gt;
-  &lt;scroller height=&quot;{{-1}}&quot;&gt;
-    &lt;view class=&quot;badge-container&quot; c-for=&quot;{{badgeData}}&quot;&gt;
-      &lt;view class=&quot;badge-desc&quot;&gt;
-        &lt;text&gt;{{item.desc}}&lt;/text&gt;
-      &lt;/view&gt;
-      &lt;light-badge 
-        is-dot=&quot;{{item.isDot || false}}&quot; 
-        size=&quot;{{item.size || &apos;large&apos;}}&quot; 
-        value=&quot;{{item.value}}&quot;
-        max=&quot;{{item.max || 99}}&quot;
-        theme=&quot;{{item.theme || &apos;#ED5050&apos;}}&quot;
-        offset=&quot;{{item.offset || [0, 0]}}&quot;
-        show-zero=&quot;{{item.showZero || false}}&quot;
-      &gt;
-        &lt;view style=&quot;width:100cpx;height:60cpx;border:1px solid #dcdfe6;border-radius:2cpx;display:flex;justify-content:center;align-items:center;&quot;&gt;&lt;text&gt;&#x8BC4;&#x8BBA;&lt;/text&gt;&lt;/view&gt;
-      &lt;/light-badge&gt;
-    &lt;/view&gt;
-  &lt;/scroller&gt;
-&lt;/page&gt;
-&lt;/template&gt;
-&lt;script&gt;
-class LightBadge {
-
-  data = {
-    badgeData:[
-      {
-        desc: &apos;&#x666E;&#x901A;badge&apos;,
-        value: 1
-      },
-      {
-        desc: &apos;&#x7EA2;&#x70B9;&#x7C7B;&#x578B;badge&apos;,
-        isDot: true,
-        value: 2
-      },
-      {
-        desc: &apos;&#x81EA;&#x5B9A;&#x4E49;&#x989C;&#x8272;badge&apos;,
-        theme: &apos;green&apos;,
-        value: 99,
-        max: 999
-      },
-      {
-        desc: &apos;value&#x6491;&#x5F00;&#x7684;badge&apos;,
-        value: &apos;888&apos;,
-        max: 999
-      },
-      {
-        desc: &apos;&#x6587;&#x672C;&#x7C7B;&#x578B;&#x7684;badge&apos;,
-        value: &apos;hot!&apos;
-      },
-      {
-        desc: &apos;&#x5C0F;&#x7684;badge&apos;,
-        size: &apos;small&apos;,
-        value: 8
-      },
-      {
-        desc: &apos;&#x8D85;&#x51FA;&#x6700;&#x5927;&#x8303;&#x56F4;&#x7684;badge&apos;,
-        max: 10,
-        value: &apos;50&apos;
-      },
-      {
-        desc: &apos;&#x81EA;&#x5B9A;&#x4E49;&#x4F4D;&#x7F6E;&#x7684;badge&apos;,
-        offset: [30, 50],
-        value: 33
-      },
-      {
-        desc: &apos;value&#x4E3A;0&#x65F6;&#x9690;&#x85CF;badge&apos;,
-        value: 0,
-        showZero: false
-      },
-      {
-        desc: &apos;value&#x4E3A;0&#x65F6;&#x663E;&#x793A;badge&apos;,
-        value: 0,
-        showZero: true
-      }
-    ]
-  }
-}
-
-export default new LightBadge();
-&lt;/script&gt;
-&lt;style scoped&gt;
-.container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background: #f8f8f8;
-}
-.badge-container {
-  flex-direction: row;
-  height: 200cpx;
-  align-items: center;
-  padding-left:70cpx;
-  margin-bottom: 20cpx;
-  border:1px solid #dcdfe6;
-}
-.badge-desc {
-  margin-right: 30cpx;
-}
-.btn {
-  margin-top: 20cpx;
-}
-&lt;/style&gt;
-&lt;script cml-type=&quot;json&quot;&gt;
-{
-    &quot;base&quot;: {
-        &quot;usingComponents&quot;: {
-          &quot;light-badge&quot;: &quot;@cmlkit/light-ui/components/light-badge/light-badge&quot;
-        }
-    },
-    &quot;wx&quot;: {
-    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
-    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-    &quot;backgroundColor&quot;: &quot;#E2E2E2&quot;
-  },
-  &quot;alipay&quot;: {
-    &quot;defaultTitle&quot;: &quot;index&quot;,
-    &quot;pullRefresh&quot;: false,
-    &quot;allowsBounceVertical&quot;: &quot;YES&quot;,
-    &quot;titleBarColor&quot;: &quot;#ffffff&quot;
-  },
-  &quot;baidu&quot;: {
-    &quot;navigationBarBackgroundColor&quot;: &quot;#ffffff&quot;,
-    &quot;navigationBarTextStyle&quot;: &quot;white&quot;,
-    &quot;navigationBarTitleText&quot;: &quot;index&quot;,
-    &quot;backgroundColor&quot;: &quot;#ffffff&quot;,
-    &quot;backgroundTextStyle&quot;: &quot;dark&quot;,
-    &quot;enablePullDownRefresh&quot;: false,
-    &quot;onReachBottomDistance&quot;: 50
-  }
-}
-&lt;/script&gt;
-</code></pre>
-<h3 id="&#x6548;&#x679C;&#x56FE;"><a name="&#x6548;&#x679C;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x6548;&#x679C;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6548;&#x679C;&#x56FE;" class="plugin-anchor" href="#&#x6548;&#x679C;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6548;&#x679C;&#x56FE;</h3>
-<table>
-<thead>
-<tr>
-<th>web</th>
-<th>weex</th>
-<th>wx</th>
-<th>alipay</th>
-<th>baidu</th>
-<th>qq</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="../assets/images/web/web-badge.png" width="200px"></td>
-<td><img src="../assets/images/weex/weex-badge.jpg" width="200px"></td>
-<td><img src="../assets/images/wx/wx-badge.png" width="200px"></td>
-<td><img src="../assets/images/alipay/ali-badge.png" width="200px"></td>
-<td><img src="../assets/images/baidu/baidu-badge.png" width="200px"></td>
-<td><img src="../assets/images/qq/qq-badge.png" width="200px"></td>
-</tr>
-</tbody>
-</table>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
-            </div>
-
-            
-                
-                <a href="light-button.html" class="navigation navigation-prev " aria-label="Previous page: light-button">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="light-bartips.html" class="navigation navigation-next " aria-label="Next page: light-bartips">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"light-badge","level":"2.2","depth":1,"next":{"title":"light-bartips","level":"2.3","depth":1,"path":"components/light-bartips.md","ref":"components/light-bartips.md","articles":[]},"previous":{"title":"light-button","level":"2.1","depth":1,"path":"components/light-button.md","ref":"components/light-button.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","toggle-chapters","anchors","ace","-highlight","highlight-code","sectionx","anchor-navigation-ex","-lunr","-search","search-pro","advanced-emoji","duoshuo","include","-sharing","code3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"github":{"url":"https://github.com/chameleon-team"},"highlight-code":{},"code3":{"copyButtons":true},"splitter":{},"include":{},"search-pro":{},"code":{"copyButtons":true},"duoshuo":{"short_name":"your duoshuo's shortname","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":true,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":false,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true}},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"light-ui组件库","gitbook":"*"},"file":{"path":"components/light-badge.md","mtime":"2020-03-13T08:02:38.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T08:27:03.774Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
-
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
-        
-    
-        
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-code3/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</code></pre></div><h3 id="效果图"><a href="#效果图" class="header-anchor">#</a> 效果图</h3> <table><thead><tr><th>web</th> <th>weex</th> <th>wx</th> <th>alipay</th> <th>baidu</th> <th>qq</th></tr></thead> <tbody><tr><td><img src="/light-ui.github.io/assets/img/web-badge.6ebee621.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/weex-badge.37e75ff9.jpg" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/wx-badge.a0606d75.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/ali-badge.067fce18.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/baidu-badge.5debe190.png" width="200px"></td> <td><img src="/light-ui.github.io/assets/img/qq-badge.79c54c50.png" width="200px"></td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/light-ui.github.io/components/light-button.html" class="prev">
+        button
+      </a></span> <span class="next"><a href="/light-ui.github.io/components/light-bartips.html">
+        bartips
+      </a>
+      →
+    </span></p></div> <footer class="footer" data-v-3d08467a><div class="content" data-v-3d08467a><div class="left" data-v-3d08467a><a href="/" class="brand" data-v-3d08467a><span data-v-3d08467a>Light-UI</span></a> <div class="info" data-v-3d08467a>Copyright © 2020 DiDi Chuxing Inc.</div></div> <div class="right" data-v-3d08467a><div class="col" data-v-3d08467a><h4 data-v-3d08467a>其他资源</h4> <a href="/components/expand.html" data-v-3d08467a>Chameleon UI</a><a href="https://github.com/beatles-chameleon/cml-demo" target="_blank" rel="noopener" data-v-3d08467a>
+              Chameleon Demo
+            </a><a href="https://github.com/chameleon-team/awesome-cml" target="_blank" rel="noopener" data-v-3d08467a>
+              Awesome Chameleon
+            </a></div><div class="col" data-v-3d08467a><h4 data-v-3d08467a>社区</h4> <a href="https://github.com/didi/chameleon/issues" target="_blank" rel="noopener" data-v-3d08467a>
+              GitHub
+            </a><a data-v-3d08467a><span data-v-3d08467a>微信交流群</span> <img src="/light-ui.github.io/assets/img/qr_weixin.59cd000a.png" alt="image" data-v-3d08467a></a><a data-v-3d08467a><span data-v-3d08467a>QQ 交流群</span> <img src="/light-ui.github.io/assets/img/qr_qq.115678d7.jpg" alt="image" data-v-3d08467a></a><a data-v-3d08467a><span data-v-3d08467a>顺风公鹿</span> <img src="/light-ui.github.io/assets/img/qr_deer.e2ddb653.png" alt="image" data-v-3d08467a></a></div><div class="col" data-v-3d08467a><h4 data-v-3d08467a>关于</h4> <a href="https://github.com/didi/chameleon/wiki/Chameleon%E5%9B%A2%E9%98%9F" target="_blank" rel="noopener" data-v-3d08467a>
+              Chameleon 团队
+            </a><a href="https://github.com/didi/chameleon/wiki/%E5%8A%A0%E5%85%A5%E6%88%91%E4%BB%AC" target="_blank" rel="noopener" data-v-3d08467a>
+              加入我们
+            </a><a href="mailto:CML@didichuxing.com" target="_blank" rel="noopener" data-v-3d08467a>
+              联系我们
+            </a><a href="https://github.com/didi/chameleon/wiki/Contributors" target="_blank" rel="noopener" data-v-3d08467a>
+              贡献者
+            </a></div></div></div></footer></main></div><div class="global-ui"><!----></div></div>
+    <script src="/light-ui.github.io/assets/js/app.9a421712.js" defer></script><script src="/light-ui.github.io/assets/js/21.5640e9a5.js" defer></script><script src="/light-ui.github.io/assets/js/1.0caf9429.js" defer></script><script src="/light-ui.github.io/assets/js/5.bb532bfa.js" defer></script><script src="/light-ui.github.io/assets/js/2.ba696d41.js" defer></script>
+  </body>
 </html>
-
